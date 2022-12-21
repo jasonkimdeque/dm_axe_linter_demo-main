@@ -30,7 +30,7 @@ shopt -s nocasematch;
         echo "Accessibility check: file: $i"
             fi
         # execute axe-linter connector - Update with connector name
-        /Users/jasonkim/documents/Deque/axe-linter-connector-macos -s $i -d . -u $AXE_LINTER_SERVER_URL -p $AXE_LINTER_SERVER_PORT --api-key $APIKEY
+        axe-linter-connector-macos -s $i -d . -u $AXE_LINTER_SERVER_URL -p $AXE_LINTER_SERVER_PORT 
  
         if [ ! -f "$OutFile" ];
            then
