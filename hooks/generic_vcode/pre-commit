@@ -26,10 +26,10 @@ shopt -s nocasematch;
 #if [[ $i == *.html ]];
         then
            if $VerboseOutput; then
-        echo "Accessibility check: file: $i"
+        echo "Accessibility check: file:    $i"
             fi
         # execute axe-linter connector - Update with connector name
-        axe-linter-connector-macos -s $i -d . -u $AXE_LINTER_SERVER_URL -p $AXE_LINTER_SERVER_PORT --api-key $APIKEY
+        /Users/jasonkim/Documents/Deque/axe-linter-connector-macos -s $i -d . -u $AXE_LINTER_SERVER_URL -p $AXE_LINTER_SERVER_PORT
  
         if [ ! -f "$OutFile" ];
            then
